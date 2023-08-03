@@ -7,6 +7,7 @@ class HomePage:
     def __init__(self, driver):
         self.driver = driver
         
+        
     loginLink = (By.ID, "login2")
     userField = (By.ID, "loginusername")
     passwordField = (By.ID, "loginpassword")
@@ -16,6 +17,7 @@ class HomePage:
     passwordFieldSignup = (By.ID, "sign-password")
     signupButton = (By.XPATH, "/html/body/div[2]/div/div/div[3]/button[2]")
     signupCloseButton = (By.XPATH, "/html/body/div[2]/div/div/div[3]/button[1]")
+    productCards = (By.XPATH, "//div[@class='card h-100']")
     
     
     
