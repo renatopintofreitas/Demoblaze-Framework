@@ -21,9 +21,6 @@ class HomePage:
     productCards = (By.XPATH, "//div[@class='card h-100']")
     
     
-    
-    
-    
     def gotoSignup(self):
         return self.driver.find_element(*HomePage.signupLink)
     
