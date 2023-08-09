@@ -50,6 +50,7 @@ class Test_e2e(BaseClass):
                 log.info(productName)
                 product.find_element(By.XPATH, "div/h4/a").click()
                 break
+            break
                 
                 
         addToCart = Cart(self.driver)
