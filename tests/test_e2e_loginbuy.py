@@ -1,5 +1,5 @@
-import pytest
-from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time        
         
         
@@ -19,7 +19,7 @@ class Test_e2e(BaseClass):
         clickLogin = HomePage(self.driver)
         clickLogin.gotoLogin().click()
         
-        time.sleep(1)
+        #WebDriverWait(self.driver, 10).until(EC
 
         writeUser = HomePage(self.driver)
         writeUser.typeUsername().send_keys(getData["email"])
