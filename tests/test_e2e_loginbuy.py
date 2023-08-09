@@ -18,6 +18,8 @@ class Test_e2e(BaseClass):
         
         clickLogin = HomePage(self.driver)
         clickLogin.gotoLogin().click()
+        
+        time.sleep(1)
 
         writeUser = HomePage(self.driver)
         writeUser.typeUsername().send_keys(getData["email"])
