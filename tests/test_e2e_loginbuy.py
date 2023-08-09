@@ -21,8 +21,7 @@ class Test_e2e(BaseClass):
         clickLogin = HomePage(self.driver)
         clickLogin.gotoLogin().click()
         
-        #time.sleep(2)
-        self.wait_for_form()
+        self.wait_for_loginform()
 
         writeUser = HomePage(self.driver)
         writeUser.typeUsername().send_keys(getData["email"])
@@ -39,7 +38,7 @@ class Test_e2e(BaseClass):
         else:
             print("Login Failed")        
 
-        time.sleep(2)    
+        #time.sleep(2)    
           
         
         productCards = Cart(self.driver)

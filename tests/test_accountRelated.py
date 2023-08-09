@@ -50,7 +50,7 @@ class TestOne(BaseClass):
         clickLogin = HomePage(self.driver)
         clickLogin.gotoLogin().click()
         
-        time.sleep(2)
+        self.wait_for_loginform()
 
         writeUser = HomePage(self.driver)
         writeUser.typeUsername().send_keys("renato8@nether.com")

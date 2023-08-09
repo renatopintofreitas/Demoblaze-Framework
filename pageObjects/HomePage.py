@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
-loginForm = (By.XPATH, "/html/body/div[3]/div/div/div[2]/form")
+loginForm = (By.CLASS_NAME, "modal-header")
+#loginForm = (By.XPATH, "/html/body/div[3]/div/div/div[2]/form")
 
 class HomePage:
     
