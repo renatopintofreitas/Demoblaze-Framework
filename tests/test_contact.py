@@ -29,13 +29,13 @@ class TestContact(BaseClass):
         clickContactSendMsg = Contact(self.driver)
         clickContactSendMsg.gotoContactSendMsg().click()
         
-        WebDriverWait(self.driver, 10).until(EC.alert_is_present())
-        
-        alert = self.driver.switch_to.alert
+        #WebDriverWait(self.driver, 10).until(EC.alert_is_present())
+        alert = self.wait_for_alert()
         alertText = alert.text
         print(alertText)
         alert.dismiss()
         time.sleep(3)
+        
         #clickContactClose = Contact(self.driver)
         #clickContactClose.gotoCloseContact().click()
         

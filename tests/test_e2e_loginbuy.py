@@ -57,7 +57,6 @@ class Test_e2e(BaseClass):
         addToCart = Cart(self.driver)
         addToCart.putInCart().click()
         
-        #WebDriverWait(self.driver, 10).until(EC.alert_is_present())
         alert = self.wait_for_alert()
         alertText = alert.text
         log.info(alertText)

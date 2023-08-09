@@ -27,9 +27,8 @@ class TestOne(BaseClass):
         clickSignupBox = HomePage(self.driver)
         clickSignupBox.clickSignupButton().click()
         
-        WebDriverWait(self.driver, 10).until(EC.alert_is_present())
-        
-        alert = self.driver.switch_to.alert
+        #WebDriverWait(self.driver, 10).until(EC.alert_is_present())
+        alert = self.wait_for_alert()
         alertText = alert.text
         
         if alertText == "This user already exist.":
