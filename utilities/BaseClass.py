@@ -1,3 +1,6 @@
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 import pytest
 import logging
 import inspect
@@ -21,3 +24,9 @@ class BaseClass:
         logger.setLevel(logging.DEBUG)
         
         return logger
+    
+    
+    def wait_for_alert(self, timeout=10):
+        WebDriverWait(self.driver, timeout).until(EC.alert_is_present())
+        alert = self.driver.switch_to.alert
+        return alert
