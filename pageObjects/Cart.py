@@ -10,7 +10,7 @@ class Cart:
         
     productCards = (By.XPATH, "//div[@class='card h-100']")
     productNameElem = (By.XPATH, "div/h4/a")
-    addToCartButton = (By.LINK_TEXT, "Add to cart")
+    addToCartButton = (By.XPATH, "/html/body/div[5]/div/div[2]/div[2]/div/a")
     gotoCartButton = (By.ID, "cartur")
     productPriceCart = (By.XPATH, "/html/body/div[6]/div/div[1]/div/table/tbody/tr/td[3]")
     totalToPayCart = (By.ID, "totalp")
