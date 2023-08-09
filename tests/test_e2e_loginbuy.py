@@ -49,6 +49,7 @@ class Test_e2e(BaseClass):
             if productName == getData["product"]:
                 log.info(productName)
                 product.find_element(By.XPATH, "div/h4/a").click()
+                time.sleep(1)
                 break
                 
                 
