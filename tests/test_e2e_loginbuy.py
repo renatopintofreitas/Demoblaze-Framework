@@ -49,11 +49,17 @@ class Test_e2e(BaseClass):
             if productName == getData["product"]:
                 log.info(productName)
                 product.find_element(By.XPATH, "div/h4/a").click()
-            break
+                break
                 
                 
         addToCart = Cart(self.driver)
         addToCart.putInCart().click()
+        
+        WebDriverWait(self.driver, 10).until(EC.alert_is_present())
+        alert = self.driver.switch_to.alert
+        alertText = alert.text
+        log.info(alertText)
+        alert.dismiss()
                 
         clickCart = Cart(self.driver)
         clickCart.gotoCart().click()        
@@ -94,6 +100,7 @@ class Test_e2e(BaseClass):
         assert "Thank you for your purchase!" in buymsg
         log.info(buymsg)
 
+        #driver.find_element(By.XPATH, "/html/body/div[10]/div[7]/div/button").click()
         time.sleep(3)
         
     @pytest.fixture(params=e2eData.test_e2e_data)
