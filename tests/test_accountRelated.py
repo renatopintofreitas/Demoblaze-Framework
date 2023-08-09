@@ -12,9 +12,11 @@ class TestOne(BaseClass):
          
     def test_signup(self):
         
-        time.sleep(1)
+        
         clickSignup = HomePage(self.driver)
         clickSignup.gotoSignup().click()
+        
+        time.sleep(1)
         
         writeUserSignup = HomePage(self.driver)
         writeUserSignup.typeUsernameSignup().send_keys("renato8@nether.com")
@@ -41,13 +43,13 @@ class TestOne(BaseClass):
             print(alertText)
             alert.accept()
             
-        time.sleep(1)
         
     def test_login(self):
         
-        time.sleep(1)
         clickLogin = HomePage(self.driver)
         clickLogin.gotoLogin().click()
+        
+        time.sleep(1)
 
         writeUser = HomePage(self.driver)
         writeUser.typeUsername().send_keys("renato8@nether.com")
