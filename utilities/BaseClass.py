@@ -6,6 +6,7 @@ import logging
 import inspect
 import os
 
+from pageObjects.HomePage import loginForm
 
 @pytest.mark.usefixtures("setup")
 class BaseClass:
@@ -30,3 +31,8 @@ class BaseClass:
         WebDriverWait(self.driver, timeout).until(EC.alert_is_present())
         alert = self.driver.switch_to.alert
         return alert
+    
+    
+    def wait_for_form(self, timeout=10):
+        WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((loginForm)))
+        

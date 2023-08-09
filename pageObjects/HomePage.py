@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-
+loginForm = (By.XPATH, "/html/body/div[3]/div/div/div[2]/form")
 
 class HomePage:
     
@@ -18,6 +18,8 @@ class HomePage:
     signupButton = (By.XPATH, "/html/body/div[2]/div/div/div[3]/button[2]")
     signupCloseButton = (By.XPATH, "/html/body/div[2]/div/div/div[3]/button[1]")
     productCards = (By.XPATH, "//div[@class='card h-100']")
+    
+    
     
     
     

@@ -21,8 +21,8 @@ class Test_e2e(BaseClass):
         clickLogin = HomePage(self.driver)
         clickLogin.gotoLogin().click()
         
-        time.sleep(2)
-        #WebDriverWait(self.driver, 10).until(EC
+        #time.sleep(2)
+        self.wait_for_form()
 
         writeUser = HomePage(self.driver)
         writeUser.typeUsername().send_keys(getData["email"])
