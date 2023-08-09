@@ -50,6 +50,8 @@ class TestOne(BaseClass):
         
         clickLogin = HomePage(self.driver)
         clickLogin.gotoLogin().click()
+        
+        time.sleep(2)
 
         writeUser = HomePage(self.driver)
         writeUser.typeUsername().send_keys("renato8@nether.com")
@@ -64,6 +66,4 @@ class TestOne(BaseClass):
         if userWelcome is not None:
             print("Login Successful")
         else:
-            print("Login Failed")        
-
-        time.sleep(5)    
+            print("Login Failed")            
