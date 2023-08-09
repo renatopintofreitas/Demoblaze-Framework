@@ -1,3 +1,5 @@
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import pytest
 import time
@@ -27,6 +29,12 @@ class TestBuy(BaseClass):
                 
         addToCart = Cart(self.driver)
         addToCart.putInCart().click()
+        
+        WebDriverWait(self.driver, 10).until(EC.alert_is_present())
+        alert = self.driver.switch_to.alert
+        alertText = alert.text
+        log.info(alertText)
+        alert.dismiss()
                 
         clickCart = Cart(self.driver)
         clickCart.gotoCart().click()        
