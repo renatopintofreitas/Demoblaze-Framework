@@ -12,7 +12,7 @@ class TestOne(BaseClass):
          
     def test_signup(self):
         
-        time.sleep(2)
+        time.sleep(1)
         clickSignup = HomePage(self.driver)
         clickSignup.gotoSignup().click()
         
@@ -45,6 +45,7 @@ class TestOne(BaseClass):
         
     def test_login(self):
         
+        time.sleep(1)
         clickLogin = HomePage(self.driver)
         clickLogin.gotoLogin().click()
 
