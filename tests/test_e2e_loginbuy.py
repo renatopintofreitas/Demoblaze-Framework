@@ -56,9 +56,7 @@ class Test_e2e(BaseClass):
         addToCart.putInCart().click()
                 
         clickCart = Cart(self.driver)
-        clickCart.gotoCart().click()   
-        
-        time.sleep(2)     
+        clickCart.gotoCart().click()        
 
         productprice = clickCart.getProductPrice().text
         totalprice = clickCart.getTotalToPay().text
