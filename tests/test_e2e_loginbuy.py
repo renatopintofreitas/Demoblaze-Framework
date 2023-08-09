@@ -36,7 +36,7 @@ class Test_e2e(BaseClass):
         else:
             print("Login Failed")        
 
-        #time.sleep(2)    
+        time.sleep(2)    
           
         
         productCards = Cart(self.driver)
@@ -99,7 +99,7 @@ class Test_e2e(BaseClass):
         log.info(buymsg)
 
         #driver.find_element(By.XPATH, "/html/body/div[10]/div[7]/div/button").click()
-        time.sleep(3)
+        time.sleep(2)
         
     @pytest.fixture(params=e2eData.test_e2e_data)
     def getData(self, request):
