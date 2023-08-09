@@ -34,5 +34,5 @@ class BaseClass:
     
     def wait_for_loginform(self, timeout=10):
         WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((loginForm)))
-        
-        
+          
+          
