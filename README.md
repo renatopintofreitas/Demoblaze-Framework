@@ -1,5 +1,3 @@
-!!NOTICE!! - this framework is currently hosted and integrated with Jenkins for educational and demonstrational purposes: http://renatopintofreitas.duckdns.org:8080/
-
 # Demoblaze-Framework
 ## Introduction
 This documentation provides guidelines and examples for using this pytest framework to perform automated testing of the Demoblaze e-commerce mock website. The tests cover various functionalities of the website, ensuring its correctness and reliability.
